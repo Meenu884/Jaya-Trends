@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jaya Trends | Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bass.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="logo">Jaya Trends</a>
+      <span class="page-title">Cart</span>
+    </div>
+    <div class="navbar-right">
+      <a href="index.html" class="nav-link">Continue Shopping</a>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <section class="cart-items" id="cart-items"></section>
+
+    <aside class="cart-summary">
+      <h2>Price Details</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal-amount">₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Discount</span>
+        <span id="discount-amount">- ₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Delivery</span>
+        <span id="delivery-amount">Free</span>
+      </div>
+      <hr>
+      <div class="summary-row summary-total">
+        <span>Total Amount</span>
+        <span id="total-amount">₹0</span>
+      </div>
+      <button class="btn-primary btn-full">Place Order</button>
+    </aside>
+  </main>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

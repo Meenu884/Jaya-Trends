@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jaya Trends | Product</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bass.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="logo">Jaya Trends</a>
+    </div>
+    <div class="navbar-right">
+      <a href="cart.html" class="cart-icon">
+        🛒 <span id="cart-count" class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="product-page" id="product-page">
+    <!-- Filled by JS -->
+  </main>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function getParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+
+    function renderProductDetail() {
+      const id = parseInt(getParam("id"), 10);
+      const product = PRODUCTS.find(p => p.id === id);
+      const container = document.getElementById("product-page");
+      if (!product) {
+        container.innerHTML = "<p>Product not found.</p>";
+        return;
+      }
+      container.innerHTML = `
+        <div class="product-detail">
+          <div class="product-detail-image">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
+          <div class="product-detail-info">
+            <h1>${product.name}</h1>
+            <p class="product-brand">${product.brand}</p>
+            <p class="product-code">Code: ${product.code}</p>
+            <div class="detail-price-row">
+              <span class="price">₹${product.price}</span>
+              <span class="mrp">₹${product.mrp}</span>
+              <span class="badge-discount">
+                ${Math.round(((product.mrp - product.price)/product.mrp)*100)}% OFF
+              </span>
+            </div>
+            <p class="product-rating">★ ${product.rating} (${product.reviews} reviews)</p>
+            <button class="btn-primary" data-id="${product.id}" onclick="addToCart(${product.id})">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProductDetail();
+      updateCartCount();
+    });
+  </script>
+</body>
+</html>

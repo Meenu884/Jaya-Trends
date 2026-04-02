@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jaya Trends | Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bass.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+  <!-- Top offer bar -->
+  <div class="top-bar">
+    JAYA SALE · Up to 75% OFF · Use code JAYA200 at checkout
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <a href="product.html" class="logo">Jaya Trends</a>
+      <nav class="nav-links">
+        <a href="#" data-category="all" class="nav-link nav-link-active">All</a>
+        <a href="#" data-category="saree" class="nav-link">Sarees</a>
+        <a href="#" data-category="ethnic" class="nav-link">Ethnic</a>
+        <a href="#" data-category="modern" class="nav-link">Modern</a>
+        <a href="#" data-category="trending" class="nav-link">Trending</a>
+      </nav>
+    </div>
+    <div class="navbar-right">
+      <div class="search-wrap">
+        <input type="text" id="search-input" placeholder="Search for sarees, kurtis, tops...">
+      </div>
+      <a href="cart.html" class="cart-icon">
+        🛒 <span id="cart-count" class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero / banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Shop the Latest Trends</h1>
+      <p>Ethnic · Western · Bridal · Daily Wear</p>
+      <button class="btn-primary">Shop Women</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-women.jpg" alt="Jaya Trends hero">
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="trust-strip">
+    <div>✔ Free Delivery</div>
+    <div>✔ 7-Day Easy Returns</div>
+    <div>✔ Secure Payments</div>
+  </section>
+
+  <!-- Category chips -->
+  <section class="chips-row">
+    <button class="chip chip-active" data-category="all">All</button>
+    <button class="chip" data-category="saree">Sarees</button>
+    <button class="chip" data-category="leggings">Leggings</button>
+    <button class="chip" data-category="shawl">Shawls</button>
+    <button class="chip" data-category="bridal">Bridal</button>
+    <button class="chip" data-category="offers">Best Offers</button>
+  </section>
+
+  <!-- Products grid -->
+  <main class="products-section">
+    <h2 class="section-title">Jaya Trends Collection</h2>
+    <div id="products-grid" class="products-grid">
+      <!-- Cards from products.js via ui.js -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-cols">
+      <div>
+        <h4>Jaya Trends</h4>
+        <p>Premium women's fashion for every occasion.</p>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <p>Help & FAQ</p>
+        <p>Returns</p>
+        <p>Track Order</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <p>Instagram</p>
+        <p>Facebook</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 Jaya Trends</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
